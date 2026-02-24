@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nufikq Portfolio | Saturn Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+        }
+        .light-mode .glass-card {
+            background: rgba(15, 23, 42, 0.05);
+            border: 1px solid rgba(15, 23, 42, 0.1);
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5% 10%;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white transition-all duration-1000">
+
+    <div id="canvas-container"></div>
+
+    <!-- Hero -->
+    <section id="hero" class="items-start">
+        <div class="max-w-3xl">
+            <h2 class="text-blue-400 font-mono mb-2 tracking-widest uppercase">System Initialized</h2>
+            <h1 class="text-7xl md:text-9xl font-black mb-6 tracking-tighter italic">
+                nufikq<br><span class="text-blue-500">LABS</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 mb-10 leading-relaxed">
+                Building digital architectures that transcend the horizon. Limitless creativity, uncompromising technology.<br>- Nur Fikri Khuluq the dev, build by AI
+            </p>
+            <div class="flex gap-4">
+                <a href="https://www.instagram.com/nurfikrikhuluq/" target="_blank" rel="noopener noreferrer" class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all transform hover:-translate-y-1 inline-block">
+                    Make an Appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio -->
+    <section id="about" class="items-end text-right">
+        <div class="glass-card p-10 max-w-2xl">
+            <h3 class="text-3xl font-bold mb-6 text-blue-400">Digital Architect</h3>
+            <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                I architect and build my own digital systems, crafting code at the speed of AI. Like Saturn's rings made of millions of particles, I believe small details are the key to the perfection of a digital product.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="text-5xl font-bold mb-12">Galaxy Archives</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 hover:bg-white/5 transition-colors cursor-pointer group">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Abstract Viewer</h3>
+                <p class="text-slate-400">Tool to View Abstracts from Scopus Exported CSV Files.</p>
+                <a href="https://nufikq.github.io/abstract-viewer-pwa/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
+            </div>
+            <div class="glass-card p-8 hover:bg-white/5 transition-colors cursor-pointer group">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors">
+                    <i data-lucide="shield" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">App Copas Tanggalan</h3>
+                <p class="text-slate-400">Copas (Copy Paste) today's date. Simple web version.</p>
+                <a href="https://nufikq.github.io/app-copas-tanggalan/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
+            </div>
+            <div class="glass-card p-8 hover:bg-white/5 transition-colors cursor-pointer group">
+                <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                    <i data-lucide="compass" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Coming Soon</h3>
+                <p class="text-slate-400">Check out my other ambitious projects.</p>
+                <a href="https://github.com/nufikq/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Social -->
+    <section class="items-center text-center">
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold mb-4">Initiate Transmission?</h2>
+            <p class="text-slate-400">Available for collaboration and ambitious projects.</p>
+        </div>
+        <div class="flex gap-8 mb-16">
+            <a href="https://github.com/nufikq/" class="p-4 glass-card hover:scale-110 transition-transform"><i data-lucide="github"></i></a>
+            <a href="https://www.linkedin.com/in/nur-fikri-khuluq/" class="p-4 glass-card hover:scale-110 transition-transform"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/nurfikrikhuluq/" class="p-4 glass-card hover:scale-110 transition-transform"><i data-lucide="instagram"></i></a>
+        </div>
+        <p class="text-slate-600 font-mono text-xs tracking-widest italic">EST. 2026 — TERRA STATION</p>
+    </section>
+
+    <script>
+        lucide.createIcons();
+
+        // --- THREE.JS: SATURN SYSTEM ---
+        let scene, camera, renderer, saturnGroup, stars;
+
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+            saturnGroup = new THREE.Group();
+            scene.add(saturnGroup);
+
+            // 1. Planet Body (Sphere with segments)
+            const planetGeom = new THREE.SphereGeometry(10, 64, 64);
+            const planetMat = new THREE.MeshPhongMaterial({ 
+                color: 0x1e293b, 
+                shininess: 100,
+                emissive: 0x0f172a
+            });
+            const planet = new THREE.Mesh(planetGeom, planetMat);
+            saturnGroup.add(planet);
+
+            // 2. Rings (Thin Torus as flattened ring)
+            const ringGeom = new THREE.RingGeometry(14, 22, 128);
+            // Rotate ring to be flat
+            ringGeom.rotateX(Math.PI / 2.5); 
+            const ringMat = new THREE.MeshPhongMaterial({ 
+                color: 0x3b82f6, 
+                side: THREE.DoubleSide, 
+                transparent: true, 
+                opacity: 0.6,
+                wireframe: true 
+            });
+            const rings = new THREE.Mesh(ringGeom, ringMat);
+            saturnGroup.add(rings);
+
+            // 3. Ring Dust Particles
+            const particlesGeom = new THREE.BufferGeometry();
+            const particleCount = 2000;
+            const posArray = new Float32Array(particleCount * 3);
+            
+            for(let i = 0; i < particleCount * 3; i+=3) {
+                const radius = 14 + Math.random() * 8;
+                const theta = Math.random() * Math.PI * 2;
+                posArray[i] = Math.cos(theta) * radius;
+                posArray[i+1] = (Math.random() - 0.5) * 1.5 + (posArray[i] * 0.2); // slight tilt
+                posArray[i+2] = Math.sin(theta) * radius;
+            }
+            particlesGeom.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particlesMat = new THREE.PointsMaterial({ size: 0.05, color: 0x60a5fa });
+            const particleMesh = new THREE.Points(particlesGeom, particlesMat);
+            saturnGroup.add(particleMesh);
+
+            // 4. Background Stars
+            const starsGeom = new THREE.BufferGeometry();
+            const starsCount = 4000;
+            const starsPos = new Float32Array(starsCount * 3);
+            for(let i = 0; i < starsCount * 3; i++) {
+                starsPos[i] = (Math.random() - 0.5) * 1500;
+            }
+            starsGeom.setAttribute('position', new THREE.BufferAttribute(starsPos, 3));
+            const starsMat = new THREE.PointsMaterial({ size: 0.8, color: 0xffffff, transparent: true });
+            stars = new THREE.Points(starsGeom, starsMat);
+            scene.add(stars);
+
+            // Lighting
+            const directLight = new THREE.DirectionalLight(0xffffff, 1.5);
+            directLight.position.set(5, 10, 7);
+            scene.add(directLight);
+            
+            const ambient = new THREE.AmbientLight(0x404040, 2);
+            scene.add(ambient);
+
+            camera.position.z = 40;
+            camera.position.y = 5;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            saturnGroup.rotation.y += 0.003;
+            saturnGroup.rotation.z += 0.001;
+            stars.rotation.y += 0.0002;
+
+            renderer.render(scene, camera);
+        }
+
+        // --- SCROLL INTERACTION ---
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const scrollRatio = scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+
+            // Change Colors
+            if (scrollRatio > 0.4) {
+                document.body.style.backgroundColor = '#f8fafc'; // light
+                document.body.style.color = '#0f172a';
+                stars.material.opacity = 1 - (scrollRatio * 1.5);
+                // Saturn becomes dark silhouette in light mode
+                saturnGroup.children[0].material.color.setHex(0x0f172a);
+                saturnGroup.children[1].material.color.setHex(0x3b82f6);
+            } else {
+                document.body.style.backgroundColor = '#020617'; // dark
+                document.body.style.color = '#ffffff';
+                stars.material.opacity = 1;
+                saturnGroup.children[0].material.color.setHex(0x1e293b);
+            }
+
+            // Movement
+            saturnGroup.position.x = scrollRatio * 30;
+            saturnGroup.position.y = scrollRatio * -10;
+            saturnGroup.scale.set(1 - scrollRatio*0.3, 1 - scrollRatio*0.3, 1 - scrollRatio*0.3);
+            
+            camera.position.z = 40 - (scrollRatio * 15);
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) - 0.5;
+            const y = (e.clientY / window.innerHeight) - 0.5;
+            saturnGroup.rotation.x = y * 0.5;
+            saturnGroup.rotation.y += x * 0.02;
+        });
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        window.onload = () => {
+            init();
+            animate();
+        };
+    </script>
+</body>
+</html>
