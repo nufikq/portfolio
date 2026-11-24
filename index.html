@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,21 +14,34 @@
             overflow-x: hidden;
             transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         canvas {
             position: fixed;
             top: 0;
             left: 0;
             z-index: -1;
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1.5rem;
         }
+
         .light-mode .glass-card {
             background: rgba(15, 23, 42, 0.05);
             border: 1px solid rgba(15, 23, 42, 0.1);
+        }
+
+        #about h3, #about p {
+            transition: color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #about.light-text h3 {
+            color: #2563eb;
+        }
+        #about.light-text p {
+            color: #334155;
         }
         section {
             min-height: 100vh;
@@ -38,6 +52,7 @@
         }
     </style>
 </head>
+
 <body class="bg-slate-950 text-white transition-all duration-1000">
 
     <div id="canvas-container"></div>
@@ -50,10 +65,12 @@
                 nufikq<br><span class="text-blue-500">LABS</span>
             </h1>
             <p class="text-xl md:text-2xl text-slate-400 mb-10 leading-relaxed">
-                Building digital architectures that transcend the horizon. Limitless creativity, uncompromising technology.<br>- Nur Fikri Khuluq the dev, build by AI
+                Building digital architectures that transcend the horizon. Limitless creativity, uncompromising
+                technology.<br>- Nur Fikri Khuluq the dev, build by AI
             </p>
             <div class="flex gap-4">
-                <a href="https://www.instagram.com/nurfikrikhuluq/" target="_blank" rel="noopener noreferrer" class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all transform hover:-translate-y-1 inline-block">
+                <a href="https://www.instagram.com/nurfikrikhuluq/" target="_blank" rel="noopener noreferrer"
+                    class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all transform hover:-translate-y-1 inline-block">
                     Make an Appointment
                 </a>
             </div>
@@ -65,7 +82,8 @@
         <div class="glass-card p-10 max-w-2xl">
             <h3 class="text-3xl font-bold mb-6 text-blue-400">Digital Architect</h3>
             <p class="text-lg text-slate-300 leading-relaxed mb-8">
-                I architect and build my own digital systems, crafting code at the speed of AI. Like Saturn's rings made of millions of particles, I believe small details are the key to the perfection of a digital product.
+                I architect and build my own digital systems, crafting code at the speed of AI. Like Saturn's rings made
+                of millions of particles, I believe small details are the key to the perfection of a digital product.
             </p>
         </div>
     </section>
@@ -75,42 +93,78 @@
         <h2 class="text-5xl font-bold mb-12">Galaxy Archives</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="glass-card p-8 hover:bg-white/5 transition-colors cursor-pointer group">
-                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
+                <div
+                    class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-500 transition-colors">
+                    <i data-lucide="bookmark" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Scrollpoint Saver</h3>
+                <p class="text-slate-400">Chrome extension to save and restore your scroll positions.</p>
+                <a href="https://chromewebstore.google.com/detail/scrollpoint-saver/bebblmofaomedklgfbddagoomgiadlaf"
+                    target="_blank" rel="noopener noreferrer"
+                    class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
+            </div>
+            <div class="glass-card p-8 hover:bg-white/5 transition-colors cursor-pointer group">
+                <div
+                    class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
                     <i data-lucide="zap" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-3">Abstract Viewer</h3>
                 <p class="text-slate-400">Tool to View Abstracts from Scopus Exported CSV Files.</p>
-                <a href="https://nufikq.github.io/abstract-viewer-pwa/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
+                <a href="https://nufikq.github.io/abstract-viewer-pwa/" target="_blank" rel="noopener noreferrer"
+                    class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
             </div>
             <div class="glass-card p-8 hover:bg-white/5 transition-colors cursor-pointer group">
-                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors">
+                <div
+                    class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors">
                     <i data-lucide="shield" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-3">App Copas Tanggalan</h3>
                 <p class="text-slate-400">Copas (Copy Paste) today's date. Simple web version.</p>
-                <a href="https://nufikq.github.io/app-copas-tanggalan/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
+                <a href="https://nufikq.github.io/app-copas-tanggalan/" target="_blank" rel="noopener noreferrer"
+                    class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
             </div>
             <div class="glass-card p-8 hover:bg-white/5 transition-colors cursor-pointer group">
-                <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                <div
+                    class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
                     <i data-lucide="compass" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-3">Coming Soon</h3>
                 <p class="text-slate-400">Check out my other ambitious projects.</p>
-                <a href="https://github.com/nufikq/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
+                <a href="https://github.com/nufikq/" target="_blank" rel="noopener noreferrer"
+                    class="text-blue-400 hover:text-blue-300 transition-colors mt-4 inline-block">Learn more →</a>
             </div>
         </div>
     </section>
 
     <!-- Footer / Social -->
     <section class="items-center text-center">
-        <div class="mb-12">
+        <div class="mb-10">
             <h2 class="text-4xl font-bold mb-4">Initiate Transmission?</h2>
-            <p class="text-slate-400">Available for collaboration and ambitious projects.</p>
+            <p class="text-slate-400 mb-8">Available for collaboration and ambitious projects.</p>
+            <a href="https://www.instagram.com/nurfikrikhuluq/" target="_blank" rel="noopener noreferrer"
+                class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all transform hover:-translate-y-1 inline-block">
+                Make an Appointment
+            </a>
         </div>
         <div class="flex gap-8 mb-16">
-            <a href="https://github.com/nufikq/" class="p-4 glass-card hover:scale-110 transition-transform"><i data-lucide="github"></i></a>
-            <a href="https://www.linkedin.com/in/nur-fikri-khuluq/" class="p-4 glass-card hover:scale-110 transition-transform"><i data-lucide="linkedin"></i></a>
-            <a href="https://www.instagram.com/nurfikrikhuluq/" class="p-4 glass-card hover:scale-110 transition-transform"><i data-lucide="instagram"></i></a>
+            <a href="https://github.com/nufikq/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                class="p-4 glass-card hover:scale-110 transition-transform flex items-center justify-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/nur-fikri-khuluq/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                class="p-4 glass-card hover:scale-110 transition-transform flex items-center justify-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/nurfikrikhuluq/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                class="p-4 glass-card hover:scale-110 transition-transform flex items-center justify-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                </svg>
+            </a>
         </div>
         <p class="text-slate-600 font-mono text-xs tracking-widest italic">EST. 2026 — TERRA STATION</p>
     </section>
@@ -120,6 +174,8 @@
 
         // --- THREE.JS: SATURN SYSTEM ---
         let scene, camera, renderer, saturnGroup, stars;
+        let targetMouseX = 0, targetMouseY = 0;
+        let currentMouseX = 0, currentMouseY = 0;
 
         function init() {
             scene = new THREE.Scene();
@@ -133,8 +189,8 @@
 
             // 1. Planet Body (Sphere with segments)
             const planetGeom = new THREE.SphereGeometry(10, 64, 64);
-            const planetMat = new THREE.MeshPhongMaterial({ 
-                color: 0x1e293b, 
+            const planetMat = new THREE.MeshPhongMaterial({
+                color: 0x1e293b,
                 shininess: 100,
                 emissive: 0x0f172a
             });
@@ -144,13 +200,13 @@
             // 2. Rings (Thin Torus as flattened ring)
             const ringGeom = new THREE.RingGeometry(14, 22, 128);
             // Rotate ring to be flat
-            ringGeom.rotateX(Math.PI / 2.5); 
-            const ringMat = new THREE.MeshPhongMaterial({ 
-                color: 0x3b82f6, 
-                side: THREE.DoubleSide, 
-                transparent: true, 
+            ringGeom.rotateX(Math.PI / 2.5);
+            const ringMat = new THREE.MeshPhongMaterial({
+                color: 0x3b82f6,
+                side: THREE.DoubleSide,
+                transparent: true,
                 opacity: 0.6,
-                wireframe: true 
+                wireframe: true
             });
             const rings = new THREE.Mesh(ringGeom, ringMat);
             saturnGroup.add(rings);
@@ -159,13 +215,13 @@
             const particlesGeom = new THREE.BufferGeometry();
             const particleCount = 2000;
             const posArray = new Float32Array(particleCount * 3);
-            
-            for(let i = 0; i < particleCount * 3; i+=3) {
+
+            for (let i = 0; i < particleCount * 3; i += 3) {
                 const radius = 14 + Math.random() * 8;
                 const theta = Math.random() * Math.PI * 2;
                 posArray[i] = Math.cos(theta) * radius;
-                posArray[i+1] = (Math.random() - 0.5) * 1.5 + (posArray[i] * 0.2); // slight tilt
-                posArray[i+2] = Math.sin(theta) * radius;
+                posArray[i + 1] = (Math.random() - 0.5) * 1.5 + (posArray[i] * 0.2); // slight tilt
+                posArray[i + 2] = Math.sin(theta) * radius;
             }
             particlesGeom.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
             const particlesMat = new THREE.PointsMaterial({ size: 0.05, color: 0x60a5fa });
@@ -176,7 +232,7 @@
             const starsGeom = new THREE.BufferGeometry();
             const starsCount = 4000;
             const starsPos = new Float32Array(starsCount * 3);
-            for(let i = 0; i < starsCount * 3; i++) {
+            for (let i = 0; i < starsCount * 3; i++) {
                 starsPos[i] = (Math.random() - 0.5) * 1500;
             }
             starsGeom.setAttribute('position', new THREE.BufferAttribute(starsPos, 3));
@@ -188,7 +244,7 @@
             const directLight = new THREE.DirectionalLight(0xffffff, 1.5);
             directLight.position.set(5, 10, 7);
             scene.add(directLight);
-            
+
             const ambient = new THREE.AmbientLight(0x404040, 2);
             scene.add(ambient);
 
@@ -198,8 +254,12 @@
 
         function animate() {
             requestAnimationFrame(animate);
-            
-            saturnGroup.rotation.y += 0.003;
+
+            currentMouseX += (targetMouseX - currentMouseX) * 0.05;
+            currentMouseY += (targetMouseY - currentMouseY) * 0.05;
+
+            saturnGroup.rotation.x = currentMouseY * 0.5;
+            saturnGroup.rotation.y += 0.003 + currentMouseX * 0.015;
             saturnGroup.rotation.z += 0.001;
             stars.rotation.y += 0.0002;
 
@@ -207,14 +267,16 @@
         }
 
         // --- SCROLL INTERACTION ---
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            const scrollRatio = scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        function updateScrollTransform() {
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollRatio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
 
             // Change Colors
+            const aboutSection = document.getElementById('about');
             if (scrollRatio > 0.4) {
                 document.body.style.backgroundColor = '#f8fafc'; // light
                 document.body.style.color = '#0f172a';
+                aboutSection.classList.add('light-text');
                 stars.material.opacity = 1 - (scrollRatio * 1.5);
                 // Saturn becomes dark silhouette in light mode
                 saturnGroup.children[0].material.color.setHex(0x0f172a);
@@ -222,29 +284,38 @@
             } else {
                 document.body.style.backgroundColor = '#020617'; // dark
                 document.body.style.color = '#ffffff';
+                aboutSection.classList.remove('light-text');
                 stars.material.opacity = 1;
                 saturnGroup.children[0].material.color.setHex(0x1e293b);
             }
 
-            // Movement
-            saturnGroup.position.x = scrollRatio * 30;
-            saturnGroup.position.y = scrollRatio * -10;
-            saturnGroup.scale.set(1 - scrollRatio*0.3, 1 - scrollRatio*0.3, 1 - scrollRatio*0.3);
-            
+            // Camera zoom & responsive viewport-based horizontal movement
             camera.position.z = 40 - (scrollRatio * 15);
-        });
+            const halfHeight = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.position.z;
+            const halfWidth = halfHeight * camera.aspect;
+
+            saturnGroup.position.x = scrollRatio * (halfWidth * 0.85);
+            saturnGroup.position.y = scrollRatio * -10;
+            saturnGroup.scale.set(1 - scrollRatio * 0.3, 1 - scrollRatio * 0.3, 1 - scrollRatio * 0.3);
+        }
+
+        window.addEventListener('scroll', updateScrollTransform);
 
         window.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth) - 0.5;
-            const y = (e.clientY / window.innerHeight) - 0.5;
-            saturnGroup.rotation.x = y * 0.5;
-            saturnGroup.rotation.y += x * 0.02;
+            targetMouseX = (e.clientX / window.innerWidth) - 0.5;
+            targetMouseY = (e.clientY / window.innerHeight) - 0.5;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            targetMouseX = 0;
+            targetMouseY = 0;
         });
 
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
+            updateScrollTransform();
         });
 
         window.onload = () => {
@@ -253,4 +324,5 @@
         };
     </script>
 </body>
+
 </html>
